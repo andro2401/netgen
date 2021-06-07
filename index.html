@@ -10,9 +10,32 @@
 </head>
 <body>
     
+    <div class="header">
+        <h1 class="heading">Books</h1>
+
+        <ul class="tabs">
+            <li data-tab-target="#list" class="tabs__tab active"><i class="fas fa-list"></i></li>
+            <li data-tab-target="#grid" class="tabs__tab"><i class="fas fa-th"></i></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div id="list" data-tab-content class="active">
+            <h1>lista</h1> 
+            
+        </div>
+
+        <div id="grid" data-tab-content> 
+            <h1>grid</h1>
+           
+        </div>
+
+        
+
+    </div>
 
 
 
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" defer></script>
 </body>
 </html>

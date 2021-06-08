@@ -62,7 +62,7 @@ body {
 }
 
 .header .tabs .active {
-  background: #e4e4e4;
+  display: none;
 }
 
 .content {

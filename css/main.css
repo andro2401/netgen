@@ -156,8 +156,25 @@ body {
 .list__item__dropdown .submenu {
   position: absolute;
   list-style-type: none;
-  background: black;
+  background: #6d6d6d;
   top: 21rem;
   right: 10%;
+}
+
+.list__item__dropdown .submenu a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+
+.list__item__dropdown .submenu a:hover {
+  background: #444444;
+}
+
+.list__item__dropdown .submenu a p {
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 /*# sourceMappingURL=main.css.map */

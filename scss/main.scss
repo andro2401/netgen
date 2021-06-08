@@ -125,9 +125,26 @@
       .submenu {
         position: absolute;
         list-style-type: none;
-        background: black;
+        background: rgb(109, 109, 109);
         top: 21rem;
         right: 10%;
+
+        a {
+          display: block;
+          text-decoration: none;
+          color: white;
+          font-size: 1.3rem;
+          padding: 1rem;
+
+          &:hover {
+            background: rgb(68, 68, 68);
+          }
+
+          p {
+            font-size: 0.8rem;
+            font-weight: 300;
+          }
+        }
       }
     }
   }

@@ -14,3 +14,20 @@ tabs.forEach(tab => {
         target.classList.add('active')
     })
 })
+
+
+/*dropdown menu*/
+
+const btn = document.getElementById('btn');
+const menu = document.getElementById('submenu');
+
+menu.style.display = 'none';
+
+btn.addEventListener('click', () =>{
+    if(menu.style.display == 'none'){
+        menu.style.display = 'block';
+
+    } else {
+        menu.style.display = 'none';
+    }
+})

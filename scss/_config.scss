@@ -16,3 +16,14 @@ html {
 body {
   font-family: Roboto, sans-serif;
 }
+
+@mixin media-md {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin media-sm {
+  @media screen and (max-width: 520px) {
+    @content;
+  }
+}

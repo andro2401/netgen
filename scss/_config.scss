@@ -17,13 +17,18 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+@mixin media-lg {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
 @mixin media-md {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 850px) {
     @content;
   }
 }
 @mixin media-sm {
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 770px) {
     @content;
   }
 }

@@ -14,58 +14,6 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-[data-tab-content] {
-  display: none;
-}
-
-.active[data-tab-content] {
-  display: block;
-}
-
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 80%;
-  max-width: 1400px;
-  margin: 4rem auto;
-}
-
-.header .heading {
-  font-size: 2.1rem;
-  font-weight: 400;
-}
-
-.header .fas {
-  font-size: 1.4rem;
-}
-
-.header .tabs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style-type: none;
-}
-
-.header .tabs__tab {
-  cursor: pointer;
-  padding: 1rem;
-}
-
-.header .tabs__tab:hover {
-  background: #e4e4e4;
-}
-
-.header .tabs .active {
-  display: none;
-}
-
 .content {
   width: 80%;
   max-width: 1400px;
@@ -184,6 +132,118 @@ body {
   font-weight: 300;
 }
 
+.grid {
+  width: min 80%, 1400px;
+  margin: 0 auto;
+}
+
+.grid__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 10rem;
+}
+
+.grid__item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: (1fr)[12];
+      grid-template-rows: repeat(12, 1fr);
+  -webkit-box-shadow: 1px 1px 1px 1px #cacaca;
+          box-shadow: 1px 1px 1px 1px #cacaca;
+}
+
+.grid__item__cover {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 10;
+  grid-row: 1 / 11;
+  width: 100%;
+  height: 100%;
+  background: lightblue;
+  text-align: center;
+}
+
+.grid__item__cover img {
+  width: 70%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+.grid__item__text {
+  grid-column: 4 / -1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 10;
+  grid-row: 1 / 11;
+  padding: 1rem;
+}
+
+.grid__item__text .headline {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.grid__item__text .quote {
+  font-size: 1.2rem;
+  color: grey;
+  margin-bottom: 1rem;
+}
+
+.grid__item__text .author {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+}
+
+.grid__item__star {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+  grid-row: 11 / -1;
+  background: #7cd5f3;
+  color: grey;
+  font-size: 1.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.grid__item__footer {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 8;
+  grid-column: 4 / 12;
+  grid-row: 11 / -1;
+  background: #7cd5f3;
+}
+
+.grid__item__dropdown {
+  grid-column: 12 / -1;
+  grid-row: 11 / -1;
+  background: #7cd5f3;
+  color: grey;
+  font-size: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 1rem;
+}
+
 @media screen and (max-width: 1000px) {
   .list__container {
     border: none;
@@ -191,11 +251,9 @@ body {
     display: grid;
     -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    -ms-grid-rows: (1fr)[2];
-        grid-template-rows: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
     gap: 2rem;
     width: 100%;
-    height: auto;
   }
   .list__head {
     display: none;
@@ -274,5 +332,57 @@ body {
     font-size: 1rem;
     padding: 0.5rem;
   }
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  max-width: 1400px;
+  margin: 4rem auto;
+}
+
+.header .heading {
+  font-size: 2.1rem;
+  font-weight: 400;
+}
+
+.header .fas {
+  font-size: 1.4rem;
+}
+
+.header .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.header .tabs__tab {
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.header .tabs__tab:hover {
+  background: #e4e4e4;
+}
+
+.header .tabs .active {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

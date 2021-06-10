@@ -1,7 +1,4 @@
 .grid {
-  width: min (80%, 1400px);
-  margin: 0 auto;
-
   &__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));

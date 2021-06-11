@@ -21,6 +21,10 @@ body {
   margin: 0 auto;
 }
 
+.list {
+  margin-bottom: 20rem;
+}
+
 .list__head {
   display: -ms-grid;
   display: grid;
@@ -112,7 +116,8 @@ body {
   position: absolute;
   list-style-type: none;
   background: #6d6d6d;
-  top: 21rem;
+  z-index: 10;
+  top: 20.8rem;
   right: 10%;
 }
 
@@ -136,12 +141,12 @@ body {
 .grid__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  -ms-grid-columns: (minmax(23rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
   grid-auto-rows: 1fr;
   gap: 1rem;
   width: 100%;
-  margin-bottom: 10rem;
+  margin-bottom: 20rem;
 }
 
 .grid__item {
@@ -237,7 +242,52 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 1rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.grid__item__dropdown .fas {
+  cursor: pointer;
+  padding: 1.5rem;
+}
+
+.grid__item__dropdown .fas:hover {
+  position: relative;
+  background: #6d6d6d;
+  color: white;
+}
+
+.grid__item__dropdown .fas:hover .submenu {
+  display: block;
+  position: absolute;
+  right: 0rem;
+  left: -19rem;
+  margin-top: 1.5rem;
+}
+
+.grid__item__dropdown .fas .submenu {
+  display: none;
+  list-style-type: none;
+  background: #6d6d6d;
+  z-index: 10;
+}
+
+.grid__item__dropdown .fas .submenu a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+
+.grid__item__dropdown .fas .submenu a:hover {
+  background: #444444;
+}
+
+.grid__item__dropdown .fas .submenu a p {
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 
 @media screen and (max-width: 1000px) {

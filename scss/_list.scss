@@ -59,7 +59,7 @@
       width: 20%;
     }
 
-    &__qoute {
+    &__quote {
       font-size: 1.2rem;
       color: $text;
       width: 35%;
@@ -90,6 +90,7 @@
       margin-left: 3rem;
       display: flex;
       color: $text;
+
       .star {
         font-size: 1.2rem;
       }
@@ -101,9 +102,8 @@
     }
 
     &__dropdown {
-      margin-left: auto;
       font-size: 1.8rem;
-      text-align: right;
+      margin-left: auto;
       position: relative;
 
       .btn {
@@ -117,6 +117,7 @@
       }
 
       .submenu {
+        display: none;
         position: absolute;
         list-style-type: none;
         background: $dropdown;
@@ -124,6 +125,7 @@
         top: 7.7rem;
         right: 0;
         left: -10rem;
+        text-align: right;
 
         a {
           display: block;
@@ -142,6 +144,39 @@
           }
         }
       }
+
+      .visible {
+        display: block;
+      }
+      /*
+      .submenu {
+        position: absolute;
+        list-style-type: none;
+        background: $dropdown;
+        z-index: 10;
+        top: 7.7rem;
+        right: 0;
+        left: -10rem;
+        text-align: right;
+
+        a {
+          display: block;
+          text-decoration: none;
+          color: white;
+          font-size: 1.3rem;
+          padding: 1rem;
+
+          &:hover {
+            background: #4a4a4a;
+          }
+
+          p {
+            font-size: 0.8rem;
+            font-weight: 300;
+          }
+        }
+      }
+      */
     }
   }
 }

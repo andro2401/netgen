@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/help.scss"
+    ],
+    "names": [],
+    "file": "help.css"
+}

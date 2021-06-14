@@ -22,18 +22,33 @@ body {
   margin: 0 auto;
 }
 
+@mixin media-xl {
+  @media screen and (max-width: 1268px) {
+    @content;
+  }
+}
 @mixin media-lg {
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1112px) {
     @content;
   }
 }
 @mixin media-md {
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 986px) {
     @content;
   }
 }
 @mixin media-sm {
   @media screen and (max-width: 770px) {
+    @content;
+  }
+}
+@mixin media-s {
+  @media screen and (max-width: 649px) {
+    @content;
+  }
+}
+@mixin media-xs {
+  @media screen and (max-width: 520px) {
     @content;
   }
 }
